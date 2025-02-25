@@ -784,7 +784,7 @@ nav h3{
     justify-content: center;
 }
 #loader h1{
-    font-size: 5vw;
+    font-size: 7vw;
     color: transparent;
     /* background: linear-gradient(90deg,rgb(255, 162, 0),rgb(240, 42, 8)); */
     background: linear-gradient(90deg,red,blue);
