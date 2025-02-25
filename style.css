@@ -1,0 +1,821 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+html, body {
+    height: 100%;
+    width: 100%;
+}
+#main{
+    /* background-color: #000; */
+    position: relative;
+    z-index: 10;
+}
+#page1{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    position: relative;
+    padding: 0.5vw 2vw;
+}
+nav{
+    padding: 2vw 0vw;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+#nav-part2{
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+  
+}
+#nav-part2 h4{
+    padding: 10px 20px;
+    border: 1px solid #0f01016c;
+    border-radius: 50px;
+    font-weight: 500;
+    color:rgba(0, 0, 0, 0.539);
+    font-size: 16px;
+    position: relative;
+    transition:ease all 0.4s;
+    overflow: hidden;
+}
+#nav-part2 h4::after{
+    content: " ";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    color: white;
+    left: 0;
+    bottom: -100%;
+    transition:ease all 0.4s;
+} 
+#nav-part2 h4:hover::after{
+    bottom: 0;
+    border-radius: 0px;
+    color: white;
+    
+}
+#nav-part2 h4 a{
+    color: black;
+    text-decoration: none;
+    position: relative;
+    z-index: 9;
+    
+}
+#nav-part2 h4:hover a{
+    color: white;
+}
+
+#center{
+    height: 73vh;
+    width: 100%;
+    /* background-color: orange; */
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    border-bottom: 1px solid #0000003c;
+    padding-bottom: 2.5vw;
+     
+}
+#left h3{
+    width: 30vw;
+    font-size:2vw;
+    line-height: 2vw; 
+}
+#center h1{
+    font-size: 10vw;
+    text-align: right;
+    line-height: 8vw;
+}
+#page1 video{
+    position: relative;
+    border-radius: 30px;
+    margin-top: 3.7vw;
+    width: 100%;
+
+}
+#hero-shape{
+    position: absolute;
+     width: 46vw;
+     height: 36vw;
+     /* border-radius: 50%; */ 
+     right: 0;
+     top: 79vh;
+}
+#hero-1{
+    position: absolute;
+    background-color: #FE320A;
+    height: 100%;
+    width: 100%;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    filter: blur(27px);
+}
+#hero-2{
+    position: absolute;
+    background:linear-gradient(#FE320A , #fe3f0a);
+    height: 30vw;
+    width: 30vw;
+    border-radius: 50%;
+    filter: blur(25px);
+    animation-name: anime_2;
+    animation-duration: 4s;
+    animation-timing-function:linear;
+    animation-iteration-count:infinite;
+    animation-direction: alternate;
+}
+#hero-3{
+    position: absolute;
+    background:linear-gradient(#FE320A , #fe3f0a);
+    height: 30vw;
+    width: 30vw;
+    border-radius: 50%;
+    filter: blur(25px);
+    animation-name: anime_1;
+    animation-duration: 3s;
+    animation-timing-function:linear;
+    animation-iteration-count:infinite;
+    animation-direction: alternate;
+}
+@keyframes anime_1 { 
+    from{
+        transform: translate(55%,-4%);
+    }
+    to{
+        transform: translate(0%,12%);
+    }
+}
+@keyframes anime_2 { 
+    from{
+        transform: translate(5%,-5%);
+    }
+    to{
+        transform: translate(-20%,30%);
+    }
+}
+
+
+#page2{
+   min-height: 100vh;
+    width: 100%;
+    position: relative;
+    background-color: #EFEAE3;
+    padding: 0vw 2vw;
+    
+}
+#moving-text{
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 6vw 0vw;
+}
+#moving-text::-webkit-scrollbar{
+    display: none;
+}
+.con{
+    white-space: nowrap;
+    display: inline-block;
+    animation-name: move;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+}
+#moving-text h1{
+    font-size: 9vw;
+    display: inline-block;
+}
+.gola{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #FF0000;
+    display: inline-block;
+    margin: 1vw 2vw;
+}
+@keyframes move {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+#page2-bottom{
+    height: 80vh;
+    width: 100%;
+    padding: 4.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+#page2-bottom h1{
+    font-size: 4vw;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 3.5vw;
+    width: 63%;
+    position: relative;
+    z-index: 9;
+    
+}
+.bottom2{
+    width: 22%;
+}
+.bottom2 img{
+    width: 100%;
+    border-radius: 15px;
+}
+.bottom2 p{
+    line-height: 1.5vw;
+    margin-top: 2vw;
+    font-size: 1vw;
+    
+}
+#page2 #gooey{
+    height: 33vw;
+    width: 33vw;
+    position: absolute;
+    background:linear-gradient(to top right,#f96e11,#e62402);
+    border-radius: 50%;
+    top: 22%;
+    left: 25%;
+    filter: blur(25px);
+    animation-name: gooey;
+    animation-duration: 5s;
+    animation-timing-function:ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    
+} 
+
+@keyframes gooey {
+    from {
+        filter: blur(25px);
+        transform: translate(10%,-10%) skew(0);
+    }
+    to {
+        filter: blur(30px);
+        transform: translate(-10%,10%) skew(-12deg);
+    }
+}
+#page3{
+    margin-top: 10vw;
+    padding: 4vw 0;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3; 
+}
+.elem{
+    height:120px;
+    width: 100%;
+    border-bottom:1px solid rgba(92, 91, 91, 0.546);
+    position: relative; 
+    display: flex;
+    align-items: center;
+    padding: 0 0vw;
+    overflow: hidden;
+
+}
+.elem h2{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 3vw;
+    z-index: 9;
+
+}
+.elem .overlay{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 166, 0, 0.842);
+    position:absolute;
+    left: 0;
+    top: -100%;
+    transition: all ease 0.2s;
+   
+}
+.elem:hover .overlay{
+    top: 0;
+}
+.left{
+    display: flex;
+    padding: 2vw 2vw;
+    gap: 0.5vw;
+}
+#page3 .dot{
+    height: 8px;
+    width: 8px;
+    background-color: #FE320A;
+    border-radius: 50px;
+    position: relative;
+    top: 0.2vw;
+}
+#page3 h6{
+    color: rgba(0, 0, 0, 0.692);
+}
+#fixed-image{
+    height: 28vw;
+    width: 23vw;
+    border-radius: 10px;
+    /* background-color: #f96e11; */
+    position: fixed;
+    z-index: 99;
+    left: 51%;
+    top: 26%;
+    display: none;
+    background-size: cover;
+    background-position: center;
+}
+#page2 #content{
+
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    color: #ccc;
+    border-radius: 4vh;
+    display: flex;
+}
+.word{
+max-width: 50%;
+padding: 0vw 9vw;
+position: relative;
+top: 20vh;
+
+}
+.word h1{
+    font-size: 4vw;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.word .h1{
+    position: relative;
+    left: 2vw;
+}
+.h1 h1{
+    color: #504a45;
+}
+.word2{
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    border-left: 2px solid #504a45;
+   
+}
+.p p{
+    font-size: 15px;
+}
+.image{
+    width:50%;
+    border-radius: 4vh;
+    background-image: url(./img/page4-1.jpg);
+    background-size: cover;
+}
+
+#page4{
+    height: 70vh;
+    width: 100%;
+    padding:8vw 2vw;
+    background-color:#EFEAE3 ;
+}
+
+/* THIS CODE IS COPY FROM SWIPWR.JS */
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    border-right: 1px solid #625c5c;
+    width: 30%;
+    padding: 0vw 2vw;
+  }
+  /* if this hide your all container child will place same size that's why am hide this*/
+  /* .swiper-slide:nth-child(2n) {
+    width: 40%;
+  }
+
+  .swiper-slide:nth-child(3n) {
+    width: 20%;
+  } */
+#page5{
+    height: 110vh;
+    width: 100%;
+    /* background-color: violet ; */
+}
+
+#footer{
+    position: fixed;
+    z-index: 9;
+    height: 105vh;
+    width: 100%;
+    bottom: 0       ;
+    background-color:rgb(239, 52, 5);
+    color: #fff;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding: 0vw 3vw;
+}
+#footer h1{
+    z-index: 99;
+    font-size: 23vw;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+.h3 p{
+    color: #dadada;
+}
+
+#footer-div{
+    height: 20vh;
+    width: 100%;
+    padding: 1vw 3vw;
+    display: flex;
+    justify-content: space-between; 
+}
+#footer-div h2{
+    bottom: 0vw;
+    font-size: 2vw;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.footerbottom{
+    border-top: 1px solid #dadada;
+    height: 3vh;
+    width: 100%;
+    z-index: 99;
+}
+.foot{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    z-index: 990;
+}
+#hero-shape2{
+     width: 100%;
+     height: 50vh;
+     position: absolute;
+     margin-top: 100%;
+     z-index: 9;
+}
+
+#hero2{
+    position: absolute;
+    background:linear-gradient(#140704 , #18100e);
+    height: 30vw;
+    width: 50vw;
+    border-radius: 50%;
+    filter: blur(30px);
+    animation-name: anime2;
+    animation-duration: 4s;
+    animation-timing-function:linear;
+    animation-iteration-count:infinite;
+    animation-direction: alternate;
+} 
+#hero3{
+    position: absolute;
+    background:linear-gradient(#0c0c0c , #110502);
+    height: 30vw;
+    width: 80vw;
+    right: 0;
+    border-radius: 40%;
+    margin-top: 100px;
+    filter: blur(36px);
+    animation-name: anime3;
+    animation-duration: 2s;
+    animation-timing-function:linear;
+    animation-iteration-count:infinite;
+    animation-direction: alternate;
+}
+#hero1{
+    position: absolute;
+    background:linear-gradient(#0c0c0c , #110502);
+    height: 50vw;
+    border-radius:50%;
+    width: 50vw;
+    left: 0;
+    filter: blur(30px);
+    margin-left: 10%;
+    animation-name: anime;
+    animation-duration: 3.5s;
+    animation-timing-function:linear;
+    animation-iteration-count:infinite;
+    animation-direction: alternate;
+}
+
+@keyframes anime { 
+    from{
+        transform: translate(0,-15%);
+    }
+    to{
+        transform: translate(-10%,0%);
+    }
+}
+@keyframes anime3 { 
+    from{
+        transform: translate(-90,0);
+    }
+    to{
+        transform: translate(0%,20%);
+    }
+} 
+
+@keyframes anime2 { 
+    from{
+        transform: translate(-55%,-10%);
+    }
+    to{
+        transform: translate(-50%,30%);
+    }
+} 
+button{
+    background-color: #000;
+    border: none;
+}
+#button h1:hover{
+    color: orangered;
+}
+.word h1:hover{
+    color: orangered;
+}
+
+nav h3{
+    display: none;
+}
+#full-scr{
+    height: 100vh;
+    width: 100%;
+    background-color: #00000072;
+    position: fixed;
+    z-index: 99;
+    top: -100%;
+    transition: ease all 0.5s;
+}
+#full-div1{
+    height: 50%;
+    width: 100%;
+    background-color: #EFEAE3;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+@media (max-width:600px) {
+    #page1{
+        min-height: 100vh;
+        width: 100%; 
+        padding: 0vw 0vw;
+    }
+    nav{
+        padding: 8vw 5vw;
+        background-color: #EFEAE3;
+        position: relative;
+        z-index: 100;
+ 
+    }
+    nav img{
+        height: 9vw;
+        transition: all ease 0.4s;
+    }
+    #nav-part2{
+        display: none;
+    }
+    nav h3{
+        display: block;
+        padding: 2vw 5vw;
+        border: 1px solid #ababab;
+        border-radius: 50px;
+        font-size: 4vw;
+        font-weight: 500;
+        padding-left: 10 vw;
+    }
+    #mid-scr{
+        position: absolute;
+        top:20%;
+        left: 25vw;
+        font-size: 22px;
+    }
+    
+#center{
+    height: 60vh;
+    width: 100%;
+    /* background-color: orange; */
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: end;
+    justify-content: space-between;
+    border-bottom: 1px solid #0000003c;
+    padding-bottom:10vw;
+    padding: 7vw 5vw;
+    position: relative;
+    z-index: 9; 
+}
+#left h3{
+    width: 100%;
+    font-size:5.5vw;
+    line-height: 7vw; 
+    
+}
+#center h1{
+    font-size: 17vw;
+    text-align: right;
+    line-height: 15vw;
+}
+#page1 video{
+    position: relative;
+    border-radius: 20px;
+    margin-top: 3.7vw;
+    height: 70vh;
+    object-fit: cover;
+    object-position: center;
+    width: 92%;
+    margin-left: 15px;
+
+}
+#hero-shape{
+    position: absolute;
+     width: 80vw;
+     height: 75vw;
+     /* border-radius: 50%; */ 
+     right: 0;
+     top: 79vh;
+}
+#hero-1{
+    position: absolute;
+    top: -100px;
+    background-color: #FE320A;
+    height: 100%;
+    width: 100%;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    filter: blur(25px);
+   
+}
+#hero-2{
+    position: absolute;
+    top: -100px;
+    background:linear-gradient(#FE320A , #fe3f0a);
+    height: 30vw;
+    width: 90vw;
+    border-radius: 50%;
+    filter: blur(20px);
+    animation-name: anime_2;
+    animation-duration: 2s;
+    animation-timing-function:linear;
+    animation-iteration-count:infinite;
+    animation-direction: alternate;
+}
+#hero-3{
+    position: absolute;
+    top: -80px;
+    background:linear-gradient(#FE320A , #fe3f0a);
+    height: 30vw;
+    width: 30vw;
+    border-radius: 50%;
+    filter: blur(25px);
+    animation-name: anime_1;
+    animation-duration: 1s;
+    animation-timing-function:linear;
+    animation-iteration-count:infinite;
+    animation-direction: alternate;
+}
+#page2{
+    min-height: 100vh;
+     width: 100%;
+     position: relative;
+     background-color: #EFEAE3;
+     padding: 0vw 2vw;
+     
+ }
+ #moving-text{
+     overflow-x: auto;
+     white-space: nowrap;
+     padding: 6vw 0vw;
+ }
+ #moving-text::-webkit-scrollbar{
+     display: none;
+ }
+ .con{
+     white-space: nowrap;
+     display: inline-block;
+     animation-name: move;
+     animation-duration: 8s;
+     animation-timing-function: linear;
+     animation-iteration-count: infinite;
+ 
+ }
+ #moving-text h1{
+     font-size: 16vw;
+     display: inline-block;
+ }
+ .gola{
+     width: 25px;
+     height: 25px;
+     border-radius: 50%;
+     background-color: #FF0000;
+     display: inline-block;
+     margin: 1vw 2vw;
+     padding: 2vw;
+ }
+ 
+#page2-bottom{
+    height: 80vh;
+    width: 100%;
+    padding: 10vw 4vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: relative;
+    
+}
+#page2-bottom h1{
+    font-size: 7vw;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height:7vw;
+    width: 100%;   
+    
+}
+.bottom2{
+    width: 100%;
+    z-index: 9;
+}
+.bottom2 img{
+    width: 100%;
+    border-radius: 15px;
+}
+.bottom2 p{
+    line-height: 4vw;
+    margin-top: 2vw;
+    font-size: 3vw;
+    
+}
+#page2 #gooey{
+    height: 70vw;
+    width: 70vw;
+    position: absolute;
+    background:linear-gradient(to top right,#fa6604,#fb2904);
+    border-radius: 50%;
+    top: 20%;
+    left: 18%;
+    filter: blur(1px);
+    animation-name: gooey;
+    animation-duration: 3s;
+    animation-timing-function:ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    
+} 
+}
+#loader{
+    width:100%;
+    height: 100%;
+    background-color:#000;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    transition: all ease 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#loader h1{
+    font-size: 5vw;
+    color: transparent;
+    /* background: linear-gradient(90deg,rgb(255, 162, 0),rgb(240, 42, 8)); */
+    background: linear-gradient(90deg,red,blue);
+    -webkit-background-clip: text;
+    position: absolute;
+    opacity: 0;
+    animation-name: load;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-delay: 1s;
+
+}
+
+#loader h1:nth-child(2){
+    animation-delay: 2s;
+}
+#loader h1:nth-child(3){
+    animation-delay: 3s;
+}   
+
+@keyframes load{
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
